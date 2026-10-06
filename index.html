@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Interest Calculator</title>
+</head>
+<body>
+    <center>
+    <form method="post">
+    <h2 style='color:red;'>Simple Interest Calculator</h2>
+
+    Principal Amount:
+    <input type="number" step="any" name="p" id="" placeholder="P"><br><br>
+
+    Rate of Interest:
+    <input type="number" step="any" name="r" id="" placeholder="R"><br><br>
+
+    Time (Years):
+    <input type="number" step="any" name="t" id="" placeholder="T"><br><br>
+
+    <button onclick="calculate()">Calculate</button>
+
+    <h3 id="result"></h3>
+</form>
+
+<legend>
+{# Display output #}
+{% if result %}
+<hr>
+<h3>Result:</h3><br>
+<span>Principle: {{ p }}</span><br>
+<span>Rate: {{ r }}</span><br>
+<span>Time: {{ t }}</span><br>
+<span>
+    <b> Simple Interest - {{ result }}</b><br>
+    <b> total Amount - {{ total }}</b>
+</span>
+
+{%endif%}
+</legend>
+</center>
+</body>
+</html>
